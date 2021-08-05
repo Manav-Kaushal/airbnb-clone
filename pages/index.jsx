@@ -1,9 +1,11 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
+import LargeCard from "../components/LargeCard";
+import MediumCard from "../components/MediumCard";
 import SmallCard from "../components/SmallCard";
 
-export default function Home({ exploreData }) {
+export default function Home({ exploreData, sliderData }) {
   return (
     <div className="">
       <Head>
@@ -25,18 +27,41 @@ export default function Home({ exploreData }) {
             ))}
           </div>
         </section>
+
+        <section>
+          <h2 className="py-8 text-4xl font-semibold">Live anywhere</h2>
+          <div className="flex p-3 -ml-3 space-x-3 overflow-scroll scrollbar-hide">
+            {sliderData.map((data, index) => (
+              <MediumCard
+                key={index + Math.random()}
+                img={data.img}
+                title={data.title}
+              />
+            ))}
+          </div>
+        </section>
+        <LargeCard
+          img="https://links.papareact.com/4cj"
+          title="The Greatest Outdoors"
+          desc="Wishlists curated by Airbnb."
+          btnText="Get Inspired"
+        />
       </main>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const endpoint = "https://links.papareact.com/pyp";
-  const exploreData = await fetch(endpoint).then((res) => res.json());
+  const exploreEndPoint = "https://links.papareact.com/pyp";
+  const exploreData = await fetch(exploreEndPoint).then((res) => res.json());
+
+  const sliderEndPoint = "https://links.papareact.com/zp1";
+  const sliderData = await fetch(sliderEndPoint).then((res) => res.json());
 
   return {
     props: {
       exploreData,
+      sliderData,
     },
   };
 }
