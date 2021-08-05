@@ -11,6 +11,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="shortcut icon" href="/airbnb_icon_512x512.ico" />
+          <link rel="stylesheet" href="/style.css" />
         </Head>
         <body>
           <Main />
