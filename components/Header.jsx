@@ -22,7 +22,7 @@ const Header = () => {
         <HiSearch className="hidden p-1.5 mx-auto text-white bg-red-400 rounded-full cursor-pointer w-7 h-7 md:inline-flex md:mx-2" />
       </div>
       <div className="flex items-center justify-end space-x-4 text-gray-500">
-        <p className="hidden md:inline">Become a host</p>
+        <p className="hidden cursor-pointer md:inline">Become a host</p>
         <HiGlobeAlt className="hidden w-6 h-6 cursor-pointer md:inline" />
         <div className="flex items-center p-2 space-x-2 border-2 rounded-full">
           <HiMenu className="w-6 h-6 cursor-pointer" />
