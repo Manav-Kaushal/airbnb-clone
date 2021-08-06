@@ -48,7 +48,7 @@ export default function Home({ exploreData, sliderData }) {
           img="https://links.papareact.com/4cj"
           title="The Greatest Outdoors"
           desc="Wishlists curated by Airbnb."
-          btnText="Get Inspired"
+          btnText="Book Now"
         />
       </main>
       <Footer />
@@ -60,7 +60,9 @@ export async function getStaticProps() {
   const exploreData = await fetch("https://links.papareact.com/pyp").then(
     (res) => res.json()
   );
-  const sliderData = await fetch("https://links.papareact.com/zp1").then((res) => res.json());
+  const sliderData = await fetch("https://links.papareact.com/zp1").then(
+    (res) => res.json()
+  );
 
   return {
     props: {
