@@ -5,7 +5,7 @@ const FooterLinks = [
       {
         id: 1,
         href: "",
-        link: "How Airbnb works",
+        link: "How Airbnb Works",
       },
       {
         id: 2,
@@ -13,11 +13,11 @@ const FooterLinks = [
       },
       {
         id: 3,
-        link: "Investors",
+        link: "Airbnb 2021",
       },
       {
         id: 4,
-        link: "Airbnb Plus",
+        link: "Investors",
       },
     ],
   },
@@ -26,23 +26,23 @@ const FooterLinks = [
     links: [
       {
         id: 1,
-        link: "Accessibility",
+        link: "Diversity & Belonging",
       },
       {
         id: 2,
-        link: "This is not a real site",
+        link: "Accessibility",
       },
       {
         id: 3,
-        link: "It's an awesome clone",
+        link: "Airbnb Associates",
       },
       {
         id: 4,
-        link: "Referrals",
+        link: "Guest Referrals",
       },
       {
         id: 5,
-        link: "Join community",
+        link: "Frontline Stays",
       },
     ],
   },
@@ -51,15 +51,15 @@ const FooterLinks = [
     links: [
       {
         id: 1,
-        link: "Register as a host",
+        link: "Host Your Home",
       },
       {
         id: 2,
-        link: "Check available locations",
+        link: "Host an Online Experience",
       },
       {
         id: 3,
-        link: "Verify yourself",
+        link: "Resource Centre",
       },
     ],
   },
@@ -68,23 +68,23 @@ const FooterLinks = [
     links: [
       {
         id: 1,
-        link: "Help center",
+        link: "Our COVID-19 Response",
       },
       {
         id: 2,
-        link: "Trust & Safety",
+        link: "Help Centre",
       },
       {
         id: 3,
-        link: "Youtube",
+        link: "Cancellation Options",
       },
       {
         id: 4,
-        link: "Hundreds of customers",
+        link: "Neighbourhood Support",
       },
       {
         id: 5,
-        link: "Join now",
+        link: "Trust & Safety",
       },
     ],
   },
