@@ -12,7 +12,6 @@ export default function Home({ exploreData, sliderData }) {
       <Head>
         <title>Welcome To AirBnb</title>
       </Head>
-      <Header />
       <Banner />
       <main className="px-8 mx-auto max-w-7xl sm:px-16">
         <section className="p-8 my-8 transition ease-out border rounded-lg shadow-lg duration-400">
@@ -51,7 +50,6 @@ export default function Home({ exploreData, sliderData }) {
           btnText="Book Now"
         />
       </main>
-      <Footer />
     </div>
   );
 }
