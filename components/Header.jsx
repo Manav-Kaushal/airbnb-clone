@@ -7,11 +7,28 @@ import {
   HiUserCircle,
   HiUsers,
 } from "react-icons/hi";
-import "react-date-range/dist/styles.css"; // main style file
-import "react-date-range/dist/theme/default.css"; // theme css file
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
+import { useRouter } from "next/dist/client/router";
 
-const Header = () => {
+const Header = ({ placeholder }) => {
+  const router = useRouter();
+  const goToHomePage = () => router.push("/");
+  const goToSearchPage = () => {
+    router
+      .push({
+        pathname: "/search",
+        query: {
+          location: searchInput,
+          startDate: startDate.toISOString(),
+          endDate: endDate.toISOString(),
+          guests,
+        },
+      })
+      .then(setSearchInput(""));
+  };
+
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -35,7 +52,10 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white bg-opacity-50 shadow-md backdrop-filter backdrop-blur-md ">
       <div className="grid grid-cols-3 p-3.5 md:px-10">
-        <div className="relative flex items-center h-10 cursor-pointer">
+        <div
+          className="relative flex items-center h-10 cursor-pointer"
+          onClick={goToHomePage}
+        >
           <Image
             src="https://links.papareact.com/qd3"
             alt=""
@@ -50,7 +70,7 @@ const Header = () => {
             onChange={(e) => setSearchInput(e.target.value)}
             className="flex-grow pl-5 text-sm text-black placeholder-gray-600 bg-transparent outline-none"
             type="text"
-            placeholder="Start your search"
+            placeholder={placeholder || "Start your search"}
           />
           <HiSearch className="hidden p-1.5 mx-auto text-white bg-red-400 rounded-full cursor-pointer w-7 h-7 md:inline-flex md:mx-2" />
         </div>
@@ -96,7 +116,10 @@ const Header = () => {
                 </button>
               </div>
               <div className="items-center flex-grow text-center">
-                <button className="w-64 p-3 text-white bg-red-400 rounded-full">
+                <button
+                  className="w-64 p-3 text-white bg-red-400 rounded-full"
+                  onClick={goToSearchPage}
+                >
                   Search
                 </button>
               </div>

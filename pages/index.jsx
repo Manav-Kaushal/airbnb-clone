@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LargeCard from "../components/LargeCard";
 import MediumCard from "../components/MediumCard";
@@ -12,6 +11,7 @@ export default function Home({ exploreData, sliderData }) {
       <Head>
         <title>Welcome To AirBnb</title>
       </Head>
+      <Header />
       <Banner />
       <main className="px-8 mx-auto max-w-7xl sm:px-16">
         <section className="p-8 my-8 transition ease-out border rounded-lg shadow-lg duration-400">
